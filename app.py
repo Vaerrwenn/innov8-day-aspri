@@ -24,7 +24,7 @@ def get_reminders():
     return jsonify(reminders)
 
 
-@app.route('/reminders/<int:reminder_id>', methods=['GET'])
+@app.route('/reminder/<int:reminder_id>', methods=['GET'])
 def get_reminder(reminder_id):
     reminder = next((reminder for reminder in reminders if reminder['id'] == reminder_id), None)
     if reminder:
